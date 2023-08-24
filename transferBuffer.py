@@ -1,12 +1,7 @@
 from collections import deque
 import numpy as np
 import pandas as pd
-from itertools import zip_longest
-
-def transpose(l):
-    toret=[list(i) for i in zip_longest(*l)]
-    return toret
-
+from utils import transpose
 
 class buffer(deque):
     def __init__(self, memory_size, id, with_n_step_return, store_path=None, tocsv=False):
@@ -46,6 +41,16 @@ class buffer(deque):
             return toret
         toret.append(t[self.idxs_mapper["N_step_return"]])
         return toret
+
+    def get_sars(self):
+        t = transpose(self)
+        toret=[]
+        for k in self.column_names:
+            idx=self.idxs_mapper[k]
+            if(k!="Terminal" and k!="Uncertainty" and k!= "N_step_return"):
+                toret.append(t[idx])
+        return toret
+
 
     def get_all_states(self):
         t = transpose(self)

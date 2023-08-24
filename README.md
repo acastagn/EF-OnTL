@@ -14,8 +14,8 @@ These methods are fundamental for proper interaction with the rest of the EF-OnT
 If you find this library useful for your work, please consider citing:
 
 @article{castagna2023expert,
-  title={Expert-Free Online Transfer Learning in Multi-Agent Reinforcement Learning},
-  author={Castagna, Alberto and Dusparic, Ivana},
-  journal={arXiv preprint arXiv:2303.01170},
-  year={2023}
+  title={Expert-Free Online Transfer Learning in Multi-Agent Reinforcement Learning},<br />
+  author={Castagna, Alberto and Dusparic, Ivana},<br />
+  journal={arXiv preprint arXiv:2303.01170},<br />
+  year={2023}<br />
 }
